@@ -1,13 +1,11 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { getEquipos } from '../../Redux/actions';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import './style.css'
 import EquipoCard from '../EquipoCard'
 
 function ListaEquipos() {
 
-    const equipos = useSelector(state => state.equipos); console.log("eq:", equipos);  
+    const equipos = useSelector(state => state.equipos); 
     
 
     return (
@@ -22,7 +20,6 @@ function ListaEquipos() {
                             nombre={e.nombre} 
                             imgEscudo={e.escudo}
                             nombreEstadio={e.nombreEstadio}
-                            imgEstadio={e.imgEstadio}
                             ubicacionEstadio={e.ubicacionEstadio}
                         />
                     )

@@ -5,7 +5,7 @@ function EquipoCard({id, nombre, imgEscudo, nombreEstadio, ubicacionEstadio}) {
     return (
         <div className='contCard'>
             <p>Club: {nombre}</p>
-            {<img src={imgEscudo} alt='not'/> }
+            {<img src={imgEscudo} alt='not' className='imgEscudo'/> }
             <p>Estadio: {nombreEstadio}</p>
             <p>Ubicación estadio: {ubicacionEstadio}</p>
         </div>

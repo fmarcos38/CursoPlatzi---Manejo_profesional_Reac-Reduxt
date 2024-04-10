@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_EQUIPOS, DATA_EQUIPOS_NORMALIZADA } from "./actionType";
+import { GET_EQUIPOS } from "./actionType";
 
 const url = "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Argentinian%20Copa%20de%20la%20Liga%20Profesional";
 
@@ -13,12 +13,12 @@ const url = "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Ar
 
 export function getEquipos(){     
     return async function(dispatch){
-        const resp = await axios.get(url);
+        const resp = await axios.get(url); console.log("resp: ", resp)
         const equipos = resp.data.teams.map(e => e);//paso la resp q viene en un obj solo a array
         const newArrayEq = equipos.map(eq => {
             return {
                 id: eq.idAPIfootball,
-                nombre: eq.strAlternate,
+                nombre: eq.strTeam,
                 nombreEstadio: eq.strStadium,
                 ubicacionEstadio: eq.strStadiumLocation,
                 imgEstadio: eq.strStadiumThumb,
