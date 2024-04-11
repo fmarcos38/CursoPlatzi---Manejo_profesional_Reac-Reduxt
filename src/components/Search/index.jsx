@@ -1,16 +1,26 @@
 import React from 'react';
-import { Col } from 'antd';
+import './search.css';
+import { SearchOutlined } from '@ant-design/icons';
 
 
-import { Input } from 'antd';
+function Search({search, setSearch}) {
+    
 
-function Search() {
     return (
-        <div>
-            <Col span={8} offset={8}>
-                <Input placeholder='search'/>
-            </Col>            
+        <div className="search-container">
+            <input
+                type='text'
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="search-input"
+                placeholder='search'
+            />
+            <button className="search-button">
+                <SearchOutlined />
+            </button>
+
         </div>
+
     )
 }
 

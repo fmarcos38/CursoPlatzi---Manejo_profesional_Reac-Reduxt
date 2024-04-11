@@ -1,0 +1,23 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.soccer-ball {
+    width: 150px;
+    height: 150px;
+    background: url('https://i.gifer.com/origin/c8/c803bccc56aab5e30757a0b679ef9917_w200.gif') no-repeat center center;
+    background-size: contain;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}

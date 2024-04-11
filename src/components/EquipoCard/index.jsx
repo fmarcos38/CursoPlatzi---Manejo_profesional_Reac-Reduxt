@@ -13,3 +13,6 @@ function EquipoCard({id, nombre, imgEscudo, nombreEstadio, ubicacionEstadio}) {
 }
 
 export default EquipoCard
+
+
+

@@ -4,7 +4,7 @@ const initialState = {
     equipos: [],
 };
 
-export default function rootReducer(state = initialState, action){
+export default function rootReducer(state = initialState, action){ //state = initialState -> cuando no hay estado actual entonces es initialState
     switch(action.type){
         case GET_EQUIPOS:
         return{

@@ -1,12 +1,10 @@
 import React from 'react'
-import {  useSelector } from 'react-redux';
 import './style.css'
 import EquipoCard from '../EquipoCard'
+import NotFound from '../NotFound'
 
-function ListaEquipos() {
+function ListaEquipos({equipos}) {
 
-    const equipos = useSelector(state => state.equipos); 
-    
 
     return (
         <div className='pokeList'>
@@ -24,7 +22,7 @@ function ListaEquipos() {
                         />
                     )
                 }) : (
-                    <p>no eq</p>
+                    <NotFound/>
                 )
             }
         </div>
