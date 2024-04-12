@@ -7,7 +7,7 @@ function ListaEquipos({equipos}) {
 
 
     return (
-        <div className='pokeList'>
+        <div className='contListaEq'>
             {
                 equipos[0] ?
                 equipos.map(e => {

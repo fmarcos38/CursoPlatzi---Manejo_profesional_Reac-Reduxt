@@ -1,0 +1,14 @@
+.contCheck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    margin: 15px;
+}
+.divCheck{
+    
+}
+.form-check-input{
+    width: 180px;
+}

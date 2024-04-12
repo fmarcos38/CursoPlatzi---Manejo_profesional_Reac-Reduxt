@@ -1,6 +1,4 @@
-.pokeList{
-    width: 90%;
+.contListaEq{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    margin: 1rem 0 1rem 0;/* arriba derecha abjo iz */
 }

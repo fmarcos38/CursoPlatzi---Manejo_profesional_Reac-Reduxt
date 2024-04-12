@@ -1,0 +1,32 @@
+.contCarousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+}
+.contInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.nombre{
+    color: aliceblue;
+    margin-top: 5px;
+}
+.escudo{
+    width: 200px;
+    height: 200px;
+}
+.contBtns{
+    margin: 5px 0 5px 0;
+}
+.btn{
+    width: 100px;
+    margin-left: 5px;
+}

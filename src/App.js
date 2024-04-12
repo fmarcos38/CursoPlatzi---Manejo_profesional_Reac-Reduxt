@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import { getEquipos } from './Redux/actions';
 import { useDispatch } from 'react-redux';
 import ListaEquipos from './components/ListaEquipos';
+import Carousel from './components/Carousel';
+import CheckVista from './components/CheckVista';
 
 //apiFutbol
 //https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Argentinian%20Copa%20de%20la%20Liga%20Profesional
@@ -15,7 +17,9 @@ function App() {
   
   //estado para el search
   const [search, setSearch] = useState(""); 
-  //estado para los equipo
+  //estado tipo de vista
+  const [vista, setVista] = useState(false);
+
   const equipos = useSelector(state => state.equipos); 
   const dispatch = useDispatch();
 
@@ -35,12 +39,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Equipos de la Liga Profesional Argentina 2024</h1>
-      <Search search={search} setSearch={setSearch}/>
-      <div className='contEquipos'>
-        <ListaEquipos equipos={arrEqs}/>
+      <div className='container'>
+        <h1>Equipos de la Liga Profesional Argentina 2024</h1>
+        <CheckVista vista={vista} setVista={setVista} />
+        {
+          vista ? (
+            <div className='contEquipos'>
+              <Search search={search} setSearch={setSearch} />
+              <ListaEquipos equipos={arrEqs} />
+            </div>
+          ) : (
+            <Carousel equipos={arrEqs} />
+          )
+        }
       </div>
-      
     </div>
   );
 }
