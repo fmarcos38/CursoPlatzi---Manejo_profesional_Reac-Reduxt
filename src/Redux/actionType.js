@@ -1,2 +1,2 @@
 export const GET_EQUIPOS = "GET_EQUIPOS";
-export const DATA_EQUIPOS_NORMALIZADA = "DATA_EQUIPOS_NORMALIZADA";
+export const TU_CLUB = "TU_CLUB";

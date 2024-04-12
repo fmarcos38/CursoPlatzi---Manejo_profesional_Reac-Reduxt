@@ -19,6 +19,7 @@ function ListaEquipos({equipos}) {
                             imgEscudo={e.escudo}
                             nombreEstadio={e.nombreEstadio}
                             ubicacionEstadio={e.ubicacionEstadio}
+                            fav={e.fav}
                         />
                     )
                 }) : (
